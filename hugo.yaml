@@ -1,3 +1,78 @@
-baseURL: https://example.org/
-languageCode: en-us
-title: My New Hugo Site
+# Cybrynt file config.
+# -------------------⟩
+
+# Configurações básicas ----⟩
+baseURL: https://example.org/ # Url padrão.
+languageCode: pt-br # Linguagem.
+theme: hextra # Tema.
+title: "Hydra Market" # Título.
+# --------------------------⟩
+
+
+# Parâmetros ---------------------------------------------⟩
+params:
+
+  footer:
+    enable: true
+    displayCopyright: false
+    displayPoweredBy: false
+
+
+  theme:
+    default: dark # Tema padrão.
+    displayToggle: true # Mudar de tema.
+
+  navbar:
+    displayTitle: true # Título.
+    displayLogo: true # Logo.
+    logo:
+      path: logos/hydra-icon-dark.svg
+      dark: logos/hydra-icon-white.svg
+      link: /
+      width: 25
+      height: 0
+
+  search:
+    enable: true # Barra de busca.
+    type: flexsearch # Tipo.
+
+    flexsearch:
+      # index page by: content | summary | heading | title
+      index: content
+      tokenize: forward
+# --------------------------------------------------------⟩
+
+
+# Menu -------------------------------------⟩
+menu:
+  main:
+    - name: Market
+      pageRef: /market
+      weight: 2
+    - name: About
+      pageRef: /about
+      weight: 3
+    - name: Search
+      weight: 4
+      params:
+        type: search
+    - name: discord
+      weight: 5
+      url: "https://discord.gg/DUzr3cYU"
+      params:
+        icon: discord
+    - name: github
+      weight: 6
+      url: "https://github.com/fluxmind-nhx/CherryValley"
+      params:
+        icon: github
+
+  sidebar:
+    - name: "More"
+      params:
+        type: separator
+      weight: 1
+    - name: "Created by Fluxmind-nhx"
+      weight: 2
+      url: "https://github.com/fluxmind-nhx"
+# ------------------------------------------⟩
